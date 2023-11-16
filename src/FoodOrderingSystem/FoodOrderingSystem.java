@@ -26,7 +26,6 @@ public class FoodOrderingSystem extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 double total = 0;
 
-                // Prices of food items
                 double pizzaPrice = 100;
                 double burgerPrice = 80;
                 double friesPrice = 65;
@@ -34,7 +33,6 @@ public class FoodOrderingSystem extends JFrame {
                 double teaPrice = 50;
                 double sundaePrice = 40;
 
-                // Compute total price based on selected items
                 if (cPizza.isSelected()) total += pizzaPrice;
                 if (cBurger.isSelected()) total += burgerPrice;
                 if (cFries.isSelected()) total += friesPrice;
@@ -42,16 +40,14 @@ public class FoodOrderingSystem extends JFrame {
                 if (cTea.isSelected()) total += teaPrice;
                 if (cSundae.isSelected()) total += sundaePrice;
 
-                // Applying discount based on selected radio button
                 if (rb5.isSelected()) {
-                    total *= 0.95; // 5% discount
+                    total *= 0.95;
                 } else if (rb10.isSelected()) {
-                    total *= 0.90; // 10% discount
+                    total *= 0.90;
                 } else if (rb15.isSelected()) {
-                    total *= 0.85; // 15% discount
+                    total *= 0.85;
                 }
 
-                // Display the total price in an option pane
                 JOptionPane.showMessageDialog(null, String.format("The total price is Php %.2f", total));
             }
         });
